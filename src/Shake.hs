@@ -127,7 +127,7 @@ shakeMain = do
 
     "site/out/head.txt" *> \ out -> do
         alwaysRerun
-        Stdout stdout <- git "rev-parse" ["master"]
+        Stdout stdout <- git "rev-parse" ["HEAD"]
         writeFileChanged out stdout
 
 
